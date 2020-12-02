@@ -1001,8 +1001,11 @@ input = (
     (1, 5, "r", "rvmjr")
 )
 
-total = 0
+inclusive = 0
+positional = 0
 for min, max, char, password in input:
-    total += password.count(char) in range(min, max+1)
-print(total)
+    inclusive += password.count(char) in range(min, max+1)
+    positional += (password[min-1] == char) != (password[max-1] == char)
+print("Part 1 : %d", inclusive)
+print("Part 2 : %d", positional)
     
