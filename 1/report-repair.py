@@ -5,3 +5,9 @@ for i in range(total):
     for j in range(i+1, total):
         if values[i] + values[j] == 2020:
             print("%s %s %s" % (values[i], values[j], values[i] * values[j]))
+
+for i in range(total):
+    for j in range(i+1, total):
+        for k in range(j+1, total):
+            if values[i] + values[j] + values[k] == 2020:
+                print("%s %s %s %s" % (values[i], values[j], values[k], values[i] * values[j] * values[k]))
